@@ -9,7 +9,7 @@ from openvoice.api import ToneColorConverter
 # ---------------------
 device = "cuda:0" if torch.cuda.is_available() else "cpu"
 
-ckpt_converter = 'F:/Lucio/voice_cloning/OpenVoice/venv/checkpoints_v2/converter'
+ckpt_converter = 'checkpoints_v2/converter'
 output_dir = 'outputs_v2'
 os.makedirs(output_dir, exist_ok=True)
 
@@ -66,3 +66,4 @@ def text_to_cloned_speech(text: str, language = 'EN_NEWEST',voice_model = 'aylan
     )
 
     return save_path
+
